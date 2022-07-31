@@ -1,6 +1,6 @@
 
 
-# Amrita-Laundry-Management-System.
+# IIITL-Laundry-Management-System.
 
 Hi! This is a NodeJS and MongoBD based project for students laundry management. this is a WEB based project using MongoDB as database.
 
@@ -13,9 +13,7 @@ For Confirmation type the following commands in your CMD or Terminal.
 >node -v
 >npm -v
 
-If you see any version no. the packages are intalled
-
-##  Packages to be Installed:
+##  Packages Installed:
 We need to install the following npm packages to run the project:
 - Express
 - MongoDB
