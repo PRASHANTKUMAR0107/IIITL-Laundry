@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.white{
+			color: white;
+		}
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body{
+	background-image: url(https://images.pexels.com/photos/994517/pexels-photo-994517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  width: 100%;
+  min-height: 90vh;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .box {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  margin: 4rem;
+}
+
+.container .box:hover .imgBox {
+  transform: translate(-0rem, -8rem);
+}
+
+.container .box:hover .content {
+  transform: translate(0rem, 8rem);
+}
+
+.imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  color: #ffffff;
+  text-align: center;
+  font-size: x-large;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  resize: both;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  z-index: 1;
+  align-items: flex-end;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  box-shadow: 5px 10px 18px #000000;
+  border-radius: 5px;
+}
+
+.content h2 {
+  display: block;
+  font-size: 2rem;
+  color: #111;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+
+.content span {
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.text-white1 h1{
+	background: linear-gradient(to right, #ffffff12 0%, #ffffff1a 100%);
+}
+/* @media (max-width: 600px) {
+  .container .box:hover .content {
+    transform: translate(0, 3.5rem);
+  }
+  .container .box:hover .imgBox {
+    transform: translate(0, -3.5rem);
+  }
+} */
+/*# sourceMappingURL=main.css.map */
+		
+	</style>
+<meta charset="UTF-8">
+<title>Laundry Management</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+</head>
+
+<body >
+<!-- <div class="jumbotron "> -->
+
+<header>
+      <nav class=" my-nav navbar  navbar-dark bg-dark navbar-expand-lg ">
+      <div class="container">
+
+
+      <a class="navbar-brand" to="/"><h1 class="white">IIITL Laundry</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"><h3> Home </h3><span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/YourOrders"><h3>Your Orders</h3></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><h3>Pricing</h3></a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="/login"><h3>Have an Account? Login</h3></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup"><h3>No? Signup</h3></a>
+          </li>
+        </ul>
+      </div>
+  </div>
+    </nav>
+    </header>
+
+
+	<!-- <nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Navbar</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			  <li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/login">Have an Account? Login</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/signup">No? Signup</a>
+			  </li>
+			
+
+			</ul>
+			<form class="d-flex" role="search">
+			  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+			  <button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		  </div>
+		</div>
+	  </nav> -->
+
+<!-- <div class="container" style=" text-align:center;">
+    <h2 style="font-family: 'Carter One'">My Laundry</h2>
+ 	<a class="btn btn-outline-primary" href="/login" >Have an Account? Login</a>
+ 	<a class="btn btn-outline-primary" href="/signup" > No? Signup</a>
+</div> -->
+<!-- </div> -->
+<!-- <div class="container fluid" > -->
+<br><br>
+	<div class="container">
+	<div class="text-white1">
+		<h1 class="shadow p-3 mb-5 rounded text-center">
+		Dirt and stain? Leave it to us. <br>
+		Contact us for a hassle-free laundry service.
+	</h1>
+	</div>
+</div>
+
+<div class="main">
+	
+	<div class="container">
+        <div class="box">
+        <a href="/login">
+            <div class="imgBox">
+                <img src="https://images.pexels.com/photos/1336873/pexels-photo-1336873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="not found"/>
+                <br />Wash
+            </div>
+            <div class="content">
+                <h2>WASH<br/>
+                <span>Delivering fresh, white, and cleaner clothes right at your doorstep</span></h2>
+            </div>
+        </a>
+        </div>
+        <div class="box">
+        <a href="/login">
+            <div class="imgBox">
+                <img src="https://images.pexels.com/photos/4210372/pexels-photo-4210372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="not found"/>
+                <br />IRON
+            </div>
+            <div class="content">
+                <h2>IRON<br/>
+                <span>Cheers to the never-ending story of us cleaning up your mess</span></h2>
+            </div>
+        </a>
+        </div>
+        <div class="box">
+        <a href="/login">
+            <div class="imgBox">
+                <img src="https://cdn.vectorstock.com/i/1000x1000/02/61/computer-repair-service-gradient-linear-icon-vector-37920261.webp" alt="not found"/>
+                <br />Report an Issue
+            </div>
+            <div class="content">
+                <h2>Report<br/>
+                <span>If you have any kind of issue regarding our services. Feel free to support</span></h2>
+            </div>
+        </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer class='bg-dark text-center text-white'>
+	<div class="container p-4 pb-0">
+		<section class="mb-4">
+  
+		<!-- <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+		  ><i class="fab fa-facebook-f"></i
+		></a>
+  
+		  <a href="" class="btn btn-primary btn-outline-light btn-floating m-1">
+			<i class="fab fa-facebook-f"></i>
+		  </a>
+  
+		  <a href="" class="btn btn-primary btn-outline-light btn-floating m-1">
+			<i class="fab fa-facebook-f"></i>
+		  </a>
+  
+		  <a href="" class="btn btn-primary btn-outline-light btn-floating m-1">
+			<i class="fab fa-facebook-f"></i>
+		  </a> -->
+
+		  <i class="fa fa-copyright" aria-hidden="true"></i>Copyright 2022 
+  
+		</section>
+	</div>
+	
+   
+  </footer>
+
+
+
+	<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>
